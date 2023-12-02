@@ -51,13 +51,13 @@ int main()
     char contestants[MAX_CONTESTANTS][50];
     int votes[MAX_CONTESTANTS] = {0};
     int numContestants;
-
-    // Get the number of contestants
-
+    
+    // Get the number of contestant
     printf("Enter the number of contestants (up to %d): ", MAX_CONTESTANTS);
     scanf("%d", &numContestants);
 
     // Validate the number of contestants
+    
     if (numContestants < 1 || numContestants > MAX_CONTESTANTS)
     {
         printf("Invalid number of contestants. Exiting program.\n");
@@ -82,6 +82,7 @@ int main()
         printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
+        
 
         switch (choice)
         {
