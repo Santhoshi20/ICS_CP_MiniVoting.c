@@ -6,6 +6,7 @@ This is the code for MiniVoting System in C language by team Yashveer Singh,Sant
 
 
 // Function to cast a vote
+```c
 void CastVote(int votes[], int contestantCount)
  {
     int choice;
@@ -24,6 +25,7 @@ void CastVote(int votes[], int contestantCount)
 }
 
 // Function to show the total votes for each contestant
+```c
 
 void ShowResults(int votes[], char contestants[][50], int contestantCount) {
     printf("Voting Results:\n");
@@ -35,6 +37,7 @@ void ShowResults(int votes[], char contestants[][50], int contestantCount) {
 }
 
 // Function to show the contestants
+```c
 
 void ShowContestants(char contestants[][50], int numContestants)
  {
