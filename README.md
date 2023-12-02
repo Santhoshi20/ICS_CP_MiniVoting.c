@@ -1,16 +1,13 @@
-# ICS_CP_MiniVoting.c
-This is the code for MiniVoting System in C language by team Yashveer Singh,Santhoshi Tejavath,Sunan and Aishwarya.
+This is the code for MiniVoting System .
 
 #include <stdio.h>
-#define MAX_CONTESTANTS 8 
-
+#define MAX_CONTESTANTS 8
 
 // Function to cast a vote
-
 void CastVote(int votes[], int contestantCount)
- {
+{
     int choice;
-    printf("Enter the contestant number you want to vote for:");
+    printf("Enter the contestant number you want to vote for: ");
     scanf("%d", &choice);
 
     // Validate the user's choice
@@ -18,39 +15,35 @@ void CastVote(int votes[], int contestantCount)
     {
         votes[choice - 1]++;
         printf("Vote cast successfully!\n");
-    } else 
+    }
+    else
     {
         printf("Invalid choice. Please enter a valid contestant number.\n");
     }
 }
 
-
 // Function to show the total votes for each contestant
-
-
-void ShowResults(int votes[], char contestants[][50], int contestantCount) {
+void ShowResults(int votes[], char contestants[][50], int contestantCount)
+{
     printf("Voting Results:\n");
-    ```c
-    for (int i = 0; i < contestantCount; i++) 
+    for (int i = 0; i < contestantCount; i++)
     {
         printf("%s: %d votes\n", contestants[i], votes[i]);
-        
     }
 }
 
 // Function to show the contestants
-
-
 void ShowContestants(char contestants[][50], int numContestants)
- {
+{
     printf("Contestants:\n");
-    for (int i = 0; i < numContestants; i++) 
-    {```c
+    for (int i = 0; i < numContestants; i++)
+    {
         printf("%d. %s\n", i + 1, contestants[i]);
     }
 }
 
-int main() {
+int main()
+{
     char contestants[MAX_CONTESTANTS][50];
     int votes[MAX_CONTESTANTS] = {0};
     int numContestants;
@@ -60,11 +53,10 @@ int main() {
     scanf("%d", &numContestants);
 
     // Validate the number of contestants
-    ```c
-    if (numContestants < 1 || numContestants > MAX_CONTESTANTS) 
+    if (numContestants < 1 || numContestants > MAX_CONTESTANTS)
     {
         printf("Invalid number of contestants. Exiting program.\n");
-        return 1;  // Exit with an error code
+        return 1; // Exit with an error code
     }
 
     // Get the names of the contestants
@@ -75,7 +67,8 @@ int main() {
     }
 
     int choice;
-    do {
+    do
+    {
         // Show menu
         printf("\nMenu:\n");
         printf("1. Show Contestants\n");
@@ -85,25 +78,26 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1:
-                ShowContestants(contestants, numContestants);
-                 printf("\n");
-                break;
-            case 2:
-                CastVote(votes, numContestants);
-                break;
-            case 3:
-                ShowResults(votes, contestants, numContestants);
-                 printf("\n");
-                break;
-            case 4:
-                printf("voting finished.Thank You for the participation!\n");
-                break;
-            default:
-                printf("Invalid choice. Please enter a valid option.\n");
+        switch (choice)
+        {
+        case 1:
+            ShowContestants(contestants, numContestants);
+            printf("\n");
+            break;
+        case 2:
+            CastVote(votes, numContestants);
+            break;
+        case 3:
+            ShowResults(votes, contestants, numContestants);
+            printf("\n");
+            break;
+        case 4:
+            printf("Voting finished. Thank You for the participation!\n");
+            break;
+        default:
+            printf("Invalid choice. Please enter a valid option.\n");
         }
     } while (choice != 4);
 
-    return 0;  
+    return 0;
 }
