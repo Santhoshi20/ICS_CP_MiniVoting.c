@@ -1,5 +1,6 @@
 MiniVoting System 
-
+#include <stdio.h>
+#define MAX_CONTESTANTS 8
 
 // Function to cast a vote
 ``` 
@@ -20,8 +21,10 @@ void CastVote(int votes[], int contestantCount)
         printf("Invalid choice. Please enter a valid contestant number.\n");
     }
 }
-
+```
 // Function to show the total votes for each contestant
+```
+
 void ShowResults(int votes[], char contestants[][50], int contestantCount)
 {
     printf("Voting Results:\n");
@@ -30,8 +33,9 @@ void ShowResults(int votes[], char contestants[][50], int contestantCount)
         printf("%s: %d votes\n", contestants[i], votes[i]);
     }
 }
-
+```
 // Function to show the contestants
+```
 void ShowContestants(char contestants[][50], int numContestants)
 {
     printf("Contestants:\n");
@@ -40,7 +44,8 @@ void ShowContestants(char contestants[][50], int numContestants)
         printf("%d. %s\n", i + 1, contestants[i]);
     }
 }
-
+```
+```
 int main()
 {
     char contestants[MAX_CONTESTANTS][50];
@@ -48,6 +53,7 @@ int main()
     int numContestants;
 
     // Get the number of contestants
+
     printf("Enter the number of contestants (up to %d): ", MAX_CONTESTANTS);
     scanf("%d", &numContestants);
 
