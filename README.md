@@ -3,7 +3,7 @@ MiniVoting System
 #define MAX_CONTESTANTS 8
 
 // Function to cast a vote
-``` 
+``` //Added for greybox in github 
 void CastVote(int votes[], int contestantCount)
 {
     int choice;
@@ -24,7 +24,6 @@ void CastVote(int votes[], int contestantCount)
 ```
 // Function to show the total votes for each contestant
 ```
-
 void ShowResults(int votes[], char contestants[][50], int contestantCount)
 {
     printf("Voting Results:\n");
