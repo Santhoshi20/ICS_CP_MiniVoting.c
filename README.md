@@ -24,6 +24,7 @@ void CastVote(int votes[], int contestantCount)
 }
 
 // Function to show the total votes for each contestant
+
 void ShowResults(int votes[], char contestants[][50], int contestantCount) {
     printf("Voting Results:\n");
     for (int i = 0; i < contestantCount; i++) 
@@ -34,6 +35,7 @@ void ShowResults(int votes[], char contestants[][50], int contestantCount) {
 }
 
 // Function to show the contestants
+
 void ShowContestants(char contestants[][50], int numContestants)
  {
     printf("Contestants:\n");
@@ -42,6 +44,7 @@ void ShowContestants(char contestants[][50], int numContestants)
         printf("%d. %s\n", i + 1, contestants[i]);
     }
 }
+
 int main() {
     char contestants[MAX_CONTESTANTS][50];
     int votes[MAX_CONTESTANTS] = {0};
