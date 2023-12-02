@@ -2,9 +2,8 @@
 This is the code for MiniVoting System in C language by team Yashveer Singh,Santhoshi Tejavath,Sunan and Aishwarya.
 #include <stdio.h>
 #define MAX_CONTESTANTS 8
-
-// Function to cast a vote
 ```c
+// Function to cast a vote
 void CastVote(int votes[], int contestantCount)
  {
     int choice;
