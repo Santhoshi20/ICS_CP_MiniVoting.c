@@ -1,9 +1,10 @@
 This is the code for MiniVoting System .
 
 #include <stdio.h>
-#define MAX_CONTESTANTS 8
+#define MAX_CONTESTANTS 8 
 
 // Function to cast a vote
+
 void CastVote(int votes[], int contestantCount)
 {
     int choice;
