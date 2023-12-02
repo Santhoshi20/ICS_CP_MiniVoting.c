@@ -1,10 +1,13 @@
 # ICS_CP_MiniVoting.c
 This is the code for MiniVoting System in C language by team Yashveer Singh,Santhoshi Tejavath,Sunan and Aishwarya.
-```c
+
+
 #include <stdio.h>
-#define MAX_CONTESTANTS 8
+#define MAX_CONTESTANTS 8 
+
 
 // Function to cast a vote
+```c
 void CastVote(int votes[], int contestantCount)
  {
     int choice;
@@ -21,6 +24,7 @@ void CastVote(int votes[], int contestantCount)
         printf("Invalid choice. Please enter a valid contestant number.\n");
     }
 }
+
 
 // Function to show the total votes for each contestant
 
