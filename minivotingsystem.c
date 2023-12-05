@@ -92,7 +92,7 @@ int main() {
             default:
                 printf("Invalid choice. Please enter a valid option.\n");
         }
-    } while (choice != 4);
+    } while (choice != 8);
 
     return 0;  
 }
